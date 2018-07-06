@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sentiment Analysis App</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Sentiment Analysis App</h1>
+  <hr/>
+  <lable>Will perform sentiment analysis on organizations and present total sentiment results.. </lable>
+  <div class="results">
+    <h3>Results</h3>
+    <lable class="loading">Loading.. Please wait</lable>
+    <br/>
+    <lable class="error">Oops.. Something went wrong</lable>
+    <br/>
+  </div>
+  <section class="totalSentiment-results">
+  </section>
+  <section class="tweet-results">
+  </section>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/html" id="totalSentimentResults_tmpl">
+    <article>
+      <div class="left">
+        <p>{{=searchText}}
+      </div>
+      <div class="right">
+        <table>
+          <tr>
+            <td>Total Score</td>
+            <td>{{=score}}</td>
+          </tr>
+          <tr>
+            <td>Total Comparative</td>
+            <td>{{=comparative}}</td>
+          </tr>
+          <tr>
+            <td>Number of Tweets</td>
+            <td>{{=numTweets}}</td>
+          </tr>
+        </table>
+      </div>
+    </article>
+  </script>
+
+</body>
+</html>
