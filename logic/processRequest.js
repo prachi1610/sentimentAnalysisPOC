@@ -42,8 +42,8 @@ module.exports = async() => {
     }
 
     console.log('Number of orgs to query for: ', queryList.length);
-    console.log('Will only query for 50 for now');
-    queryList = queryList.slice(0,50)
+    console.log('Will only query for 10 for now');
+    queryList = queryList.slice(0,10)
 
     var results =[];
     results = await doSearch(queryList);
